@@ -221,6 +221,40 @@ footer p{
     font-size:large;
 }
 
+
     /*color:rgb(228, 218, 249);*/
 
     /*color:rgb(146, 124, 194);*/
+#information .container .item1 p:after{
+    content:'';
+    width:0%;
+    height:1px;
+    background-color: white;
+    position:absolute;
+    top:30px;
+    transition:0.5s;
+}
+#information .container .item1 p:hover:after{
+    width:15%;
+    left:442px;
+}
+#information .container .item1 p{
+    position:relative;
+}
+
+#skill .text p:after{
+    content:'';
+    width:0%;
+    height:1px;
+    background-color: white;
+    position:absolute;
+    top:30px;
+    transition:0.5s;
+}
+#skill .text p:hover:after{
+    width:15%;
+    left:442px;
+}
+#skill .text p{
+    position:relative;
+}
