@@ -11,7 +11,6 @@ html{
 body{
     background-color:#322979;
     font-family:'Roboto';
-    overflow: hidden;
 }
 #desktop{
     width:100%;
