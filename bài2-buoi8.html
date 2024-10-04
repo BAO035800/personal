@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tìm số lớn nhất và nhỏ nhất</title>
+    <script>
+        function findMinMax() {
+            let input = prompt("Nhập dãy số có dấu cách");
+            let numbers = input.split(' ').map(Number);
+            let min = Math.min(...numbers);
+            let max = Math.max(...numbers);
+            document.getElementById("result").innerHTML = "Số nhỏ nhất là: " + min + "<br>Số lớn nhất là: " + max;
+        }
+    </script>
+</head>
+<body>
+    <h1>Tìm số lớn nhất và nhỏ nhất</h1>
+    <button onclick="findMinMax()">Nhập dãy số</button>
+    <p id="result"></p>
+</body>
+</html>
