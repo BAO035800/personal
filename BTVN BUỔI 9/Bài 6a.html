@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đổi màu nền</title>
+    <style>
+        body {
+            background-color: white;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <button id="changeColorButton">Xanh</button>
+    <script>
+        const button = document.getElementById('changeColorButton');
+        const body = document.body;
+        const originalColor = body.style.backgroundColor;
+
+        button.addEventListener('click', () => {
+            if (body.style.backgroundColor === 'green') {
+                body.style.backgroundColor = originalColor;
+            } else {
+                body.style.backgroundColor = 'green';
+            }
+        });
+    </script>
+</body>
+</html>

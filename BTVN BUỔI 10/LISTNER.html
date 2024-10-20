@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTNER</title>
+    <style>
+        body{
+            background-color:#322979;
+            background-repeat: no-repeat;
+            width:100vw;
+            height:100vh;
+            font-family:'Roboto';
+            overflow-x:hidden;
+        }
+        div{
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:100px;
+            width:60%;
+            height:auto;
+            background:linear-gradient(to bottom,rgba(202,230,255,0.2) 0%,rgba(126,126,255,0.2) 60%,rgba(64,12,255,0.2) 100%);
+            backdrop-filter: blur(100);
+            border-radius:50px;
+            position:relative;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        p,h2{
+            font-size: 2vw;
+            color:white;
+            text-align: center;
+        }
+        img{
+            width:30%;
+            background-size:contain;
+        }
+        button{
+            width:30%;
+            height:10rem;
+            font-size: 3.5rem;
+            backdrop-filter: blur(100);
+            background-color: rgb(136, 136, 228);
+            border:none;
+            color:white;
+        }
+        button:active{
+            background-color: rgb(77, 77, 154);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>ĐÂY LÀ VÍ DỤ VỀ SỰ KIỆN LISTENER</h2>
+        <button id="button">ẤN VÀO ĐÂY</button>
+        <p id="demo"></p>
+    </div>
+    <script>
+        const x=document.getElementById("button");
+        x.addEventListener("click",ham);
+        function ham(){
+            document.getElementById("demo").innerHTML = "ĐÂY LÀ NỘI DUNG";
+        }
+    </script>
+</body>
+</html>

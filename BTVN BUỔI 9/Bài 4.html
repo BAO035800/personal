@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Đăng Ký</title>
+    <style>
+       form{
+        display:flex;
+        flex-direction: column;
+       }
+    </style>
+</head>
+<body>
+    <h1>FORM ĐĂNG KÝ</h1>
+    <form>
+        <div>
+            <label for="ho">Họ:</label>
+            <input type="text" id="ho" name="ho" required>
+    
+            <label for="ten">Tên:</label>
+            <input type="text" id="ten" name="ten" required>
+        </div>
+        <div>
+            <label for="ngay-sinh">Ngày sinh:</label>
+            <label for="ngay-sinh">Ngày:</label>
+            <select id="ngay" name="ngay" ></select>
+            <label for="ngay-sinh">Tháng:</label>
+            <select id="thang" name="thang"></select>
+            <label for="ngay-sinh">Năm:</label>
+            <select id="nam" name="nam"></select>
+        </div>
+        <div>
+            <label>Giới tính:</label>
+            <input type="radio" name="gioi-tinh" value="nam"> Nam
+            <input type="radio" name="gioi-tinh" value="nu"> Nữ
+        </div>
+        <div>
+            <label for="so-dien-thoai">Số điện thoại:</label>
+            <input type="tel" id="so-dien-thoai" name="so-dien-thoai" required pattern="[0-9]{10}">
+        </div>
+        <div>
+            <label>Sở thích:</label>
+            <input type="checkbox" name="so-thich" value="doc-sach"> Đọc sách
+            <input type="checkbox" name="so-thich" value="xem-phim"> Xem phim
+            <input type="checkbox" name="so-thich" value="nghe-nhac"> Nghe nhạc
+            <input type="checkbox" name="so-thich" value="da-bong"> Đá bóng
+        </div>
+        <div><label for="khac">Khác:</label>
+            <textarea id="khac" name="khac"></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+    <script>
+        // Hàm để tạo các option cho select
+function populateDateSelects() {
+    const ngaySelect = document.getElementById('ngay');
+    const thangSelect = document.getElementById('thang');
+    const namSelect = document.getElementById('nam');
+
+    // Thêm số ngày từ 1 đến 31
+    for (let i = 1; i <= 31; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        ngaySelect.appendChild(option);
+    }
+
+    // Thêm số tháng từ 1 đến 12
+    for (let i = 1; i <= 12; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        thangSelect.appendChild(option);
+    }
+
+    // Thêm năm (ví dụ từ 1900 đến năm hiện tại)
+    const currentYear = new Date().getFullYear();
+    for (let i = 1900; i <= currentYear; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        namSelect.appendChild(option);
+    }
+}
+
+// Gọi hàm để điền dữ liệu khi trang được tải
+window.onload = populateDateSelects;
+
+    </script>
+</body>
+</html>

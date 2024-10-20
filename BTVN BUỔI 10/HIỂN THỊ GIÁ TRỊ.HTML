@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị giá trị</title>
+    <style>
+        body{
+            background-color:#322979;
+            background-repeat: no-repeat;
+            width:100vw;
+            height:100vh;
+            font-family:'Roboto';
+            overflow-x:hidden;
+        }
+        div{
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:100px;
+            width:70%;
+            height:80%;
+            background:linear-gradient(to bottom,rgba(202,230,255,0.2) 0%,rgba(126,126,255,0.2) 60%,rgba(64,12,255,0.2) 100%);
+            backdrop-filter: blur(100);
+            border-radius:50px;
+            position:relative;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        p,h2{
+            font-size: 2vw;
+            color:white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Đây là ví dụ về hiển thị</h2>
+        <p class="first">Hello World</p>
+        <p class="second"></p>
+    </div>
+    <script>
+        let x=document.getElementsByClassName("first")[0];
+        document.getElementsByClassName("second")[0].innerHTML='DÒNG NÀY LÀ NỘI DUNG THÊM VÀO:XIN CHÀO THẾ GIỚI -'  + x.innerHTML;
+    </script>
+</body>
+</html>

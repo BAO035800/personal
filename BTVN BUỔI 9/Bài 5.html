@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Slideshow Ảnh</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .slideshow-container {
+        position: relative;
+        max-width: 100%; /* Đặt chiều rộng tối đa */
+        margin: auto;
+        overflow: hidden; /* Ẩn những phần không hiển thị */
+    }
+    
+    .slides {
+        display: none; /* Ẩn tất cả các slide */
+    }
+    
+    img {
+        width: 100%; /* Đảm bảo hình ảnh chiếm 100% chiều rộng */
+    }
+    
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="https://i.pinimg.com/originals/d9/15/c0/d915c0ebe401bde0b3b1d7d3dd6fd8d6.gif" style="width:100vh height:100vh background-size:cover">
+        </div>
+        <div class="slides fade">
+            <img src="https://i.pinimg.com/originals/11/0f/61/110f6138070849ac20b581eba7ada3ad.gif" style="width:100vh height:100vh background-size:cover" >
+        </div>
+        <div class="slides fade">
+            <img src="https://i.pinimg.com/originals/14/ae/7e/14ae7ede205573466d68eb3a562fe349.gif" style="width:100vh height:100vh background-size:cover">
+        </div>
+
+        <!-- Các nút điều khiển -->
+        <a class="prev" onclick="changeSlide(-1)"><i class="fa-solid fa-arrow-left"></i></a>
+        <a class="next" onclick="changeSlide(1)"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <script >
+        let slideIndex = 0;
+showSlides();
+
+// Hàm hiển thị các slide
+function showSlides() {
+    const slides = document.getElementsByClassName("slides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; // Ẩn tất cả các slide
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 } // Đặt lại nếu vượt quá số slide
+    slides[slideIndex - 1].style.display = "block"; // Hiển thị slide hiện tại
+    setTimeout(showSlides, 5000); // Chuyển slide mỗi 3 giây
+}
+
+// Hàm để thay đổi slide khi nhấp vào nút
+function changeSlide(n) {
+    slideIndex += n;
+    const slides = document.getElementsByClassName("slides");
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex < 1) { slideIndex = slides.length }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; // Ẩn tất cả các slide
+    }
+    slides[slideIndex - 1].style.display = "block"; // Hiển thị slide hiện tại
+}
+
+    </script>
+</body>
+</html>
