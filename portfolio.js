@@ -32,19 +32,7 @@ function scrollFunction() {
   }
 }
 
-function resetHeaderStyles() {
-  // Tắt transition tạm thời
-  document.getElementById("header").style.transition = "none";
-  document.getElementById("logo-personal").style.transition = "none";
-  document.querySelector(".menu").style.transition = "none";
 
-  // Khôi phục transition sau khi đặt lại xong
-  setTimeout(() => {
-      document.getElementById("header").style.transition = "";
-      document.getElementById("logo-personal").style.transition = "";
-      document.querySelector(".menu").style.transition = "";
-  }, 0);
-}
 //nav//
 function openMenu() {
   document.getElementsByClassName('menu')[0].style.right = "0"; // Trượt menu vào
