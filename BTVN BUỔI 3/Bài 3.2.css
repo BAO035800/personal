@@ -1,0 +1,25 @@
+div{
+    height:100px;
+    width:100px;
+    color:rgb(255, 255, 255);
+    margin:10px;
+}
+.red{
+    background-color: red;
+    line-height:100px;
+    text-align:center;
+}
+.blue{
+    background-color:blue;
+    line-height:100px;
+    text-align:center;
+}
+.green{
+    background-color: green;
+    line-height:100px;
+    text-align:center;
+}
+ul{
+    color:rgb(48, 48, 255);
+    list-style-type: square;
+}

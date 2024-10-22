@@ -1,0 +1,23 @@
+*{
+    font-family:'Roboto Slab',serif;
+    width:560px;
+    margin-left:auto;
+    margin-right:auto;
+}
+h1{
+    color:rgb(19,151,151);
+}
+.TIN{
+    background-color:rgb(66,189,189);
+}
+li:hover{
+    color:rgb(228,228,19);
+}
+figure{
+    width:560px;
+    height:430px;
+    background-color:rgb(194,186,186);
+}
+figcaption{
+    color:rgb(66,68,189);
+}

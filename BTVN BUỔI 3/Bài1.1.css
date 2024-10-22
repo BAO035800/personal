@@ -1,0 +1,29 @@
+body{
+    font-family: system-ui,  'Segoe UI', sans-serif;
+    font-size: 2;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.p1{
+    color: tomato;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:before{
+    color: black;
+}
+a:hover{
+    color: tomato;
+}
+img{
+    max-width: fit-content;
+    width: 100%;
+    height: auto;
+}
+hr{
+    opacity: 20%;
+}

@@ -1,0 +1,214 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #dbfdc8;  /* fallback for old browsers */
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+h1{
+    font-size:x-large;
+    font-weight:900;
+}
+.header{
+    background: #a8ff78;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #78ffd79f , #a7ff7887);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom , #78ffd79f , #a7ff7887); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height:500px;
+    width:100%;
+    border-bottom-right-radius:60px;
+    border-bottom-left-radius:60px;
+    -webkit-backdrop-filter: blur(10px);
+}
+.subnav{
+    background: #11998e; 
+    background: -webkit-linear-gradient(to bottom, #3ef584cd, #1fc1b3);  
+    background: linear-gradient(to bottom, #3ef584cd, #1fc1b3); 
+    text-align:center;
+}
+.subnav ul li:hover{
+    word-spacing:5px;
+    background-color: #1fc1b3;
+    color:rgb(125, 215, 185);
+}
+ul li{
+    display:inline-block;
+}
+ul li a{
+    text-decoration:none;
+    color:white;
+    display:inline-block;
+    height:50px;
+    line-height:50px;
+    padding:0px 50px;
+    font-size:large;
+}
+.dad a{
+    position:relative;
+}
+.subnav-content{
+    display:none;
+    position:absolute;
+    background-color:#00c64ccd;
+}
+
+.dad:hover ul {
+    display:block;
+}
+
+.dad ul li{
+    display:block;
+    width:100%;
+}
+.subnav-content:hover li .buoi1{
+    display:block;
+}
+.dad ul li:hover{
+    background-color: rgb(12, 160, 31);
+}
+.subnav-content li{
+    position:relative;
+}
+.subnav-content:hover ul li{
+    display:block;
+}
+.avatar{
+    
+    text-align:center;
+}
+.avatar img{
+    margin:30px auto 20px;
+    border-radius:999px;
+    object-fit:cover;
+    width:200px;
+    height:200px;
+}
+#giới-thiệu{
+    background-color:white;
+    height:330px;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:100px;
+    opacity:0.8;
+    backdrop-filter: blur(10px);
+    filter: drop-shadow(10px 5px 10px rgb(130, 231, 144));
+}
+#giới-thiệu h1{
+    padding-top:30px;
+    text-align:center;
+    font-size:x-large;
+    font-weight:900;
+}
+#giới-thiệu p{
+    padding:20px 50px;
+    text-align:justify;
+    margin-right:auto;
+    margin-left:auto;
+    font-size: 20px;
+}
+#giới-thiệu hr{
+    margin-top:10px;
+    width:200px;
+    text-align:center;
+    opacity:0.5;
+}
+#thông-tin{
+    background-color:rgb(249, 255, 248);
+    height: 530px;
+    width:70%;
+    margin:230px auto 50px;
+    border-radius:100px;
+    text-align:center;
+    margin-right:auto;
+    margin-left:auto;
+    opacity:0.8;
+    backdrop-filter: blur(50px);
+    filter: drop-shadow(10px 5px 10px rgb(162, 249, 174));
+}
+#thông-tin:hover{
+    filter: drop-shadow(5px 5px 10px rgba(94, 255, 182, 0.792));
+    position:relative;
+    top: 5px;
+}
+#thông-tin h1{
+    padding-top:30px;
+    text-align:center;
+    font-size:x-large;
+    font-weight:900;
+}
+#thông-tin p{
+    padding:20px 70px;
+    text-align:justify;
+    margin-right:auto;
+    margin-left:auto;
+    font-size: 20px;
+}
+#thông-tin hr{
+    margin-top:10px;
+    width:250px;
+    text-align:center;
+    opacity:0.5;
+}
+#kĩ-năng{
+    background-color:rgb(249, 255, 248);
+    height: 50px;
+    width:70%;
+    border-radius:25px;
+    text-align:center;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:30px;
+    filter: drop-shadow(10px 5px 10px rgb(162, 249, 174));
+}
+#kĩ-năng:hover{
+    filter: drop-shadow(5px 5px 10px rgba(94, 255, 182, 0.792));
+    position:relative;
+    top: 5px;
+}
+#kĩ-năng p{
+    line-height:50px;
+}
+#dự-án{
+    background-color:rgb(249, 255, 248);
+    height:50px;
+    width:70%;
+    border-radius:25px;
+    text-align:center;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:30px;
+    filter: drop-shadow(10px 5px 10px rgb(162, 249, 174));
+}
+#dự-án p{
+    line-height:50px;
+}
+#dự-án:hover{
+    filter: drop-shadow(5px 5px 10px rgba(94, 255, 182, 0.792));
+    position:relative;
+    top: 5px;
+}
+
+footer{
+    background-color:rgb(172, 255, 158);
+    height:50px;
+    width:100%;
+    text-align:center;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:30px;
+    filter: drop-shadow(10px 5px 10px rgb(162, 249, 174));
+}
+audio{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:20px;
+}

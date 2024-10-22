@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Các phép toán</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .operation {
+            margin-bottom: 10px;
+        }
+        .operation input[type="text"] {
+            width: 50px;
+            text-align: center;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        .history span {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Các phép toán</h2>
+    <div class="operation">
+        <label>Phép cộng</label>
+        <input type="text" id="add1"> +
+        <input type="text" id="add2"> =
+        <input type="text" id="addResult" readonly>
+        <button onclick="add()">Tính</button>
+    </div>
+    <div class="operation">
+        <label>Phép trừ</label>
+        <input type="text" id="subtract1"> -
+        <input type="text" id="subtract2"> =
+        <input type="text" id="subtractResult" readonly>
+        <button onclick="subtract()">Tính</button>
+    </div>
+    <div class="operation">
+        <label>Phép nhân</label>
+        <input type="text" id="multiply1"> *
+        <input type="text" id="multiply2"> =
+        <input type="text" id="multiplyResult" readonly>
+        <button onclick="multiply()">Tính</button>
+    </div>
+    <div class="operation">
+        <label>Phép chia</label>
+        <input type="text" id="divide1"> /
+        <input type="text" id="divide2"> =
+        <input type="text" id="divideResult" readonly>
+        <button onclick="divide()">Tính</button>
+    </div>
+    
+    <div class="result">
+        <h3>Các phép toán vừa thực hiện</h3>
+        <div class="history" id="history"></div>
+    </div>
+
+    <script>
+        function add() {
+            let num1 = parseFloat(document.getElementById("add1").value);
+            let num2 = parseFloat(document.getElementById("add2").value);
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Vui lòng nhập số hợp lệ cho phép cộng.");
+                return;
+            }
+            let result = num1 + num2;
+            document.getElementById("addResult").value = result;
+            addToHistory("PHÉP CỘNG", `${num1} + ${num2} = ${result}`, "add");
+        }
+
+        function subtract() {
+            let num1 = parseFloat(document.getElementById("subtract1").value);
+            let num2 = parseFloat(document.getElementById("subtract2").value);
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Vui lòng nhập số hợp lệ cho phép trừ.");
+                return;
+            }
+            let result = num1 - num2;
+            document.getElementById("subtractResult").value = result;
+            addToHistory("PHÉP TRỪ", `${num1} - ${num2} = ${result}`, "subtract");
+        }
+
+        function multiply() {
+            let num1 = parseFloat(document.getElementById("multiply1").value);
+            let num2 = parseFloat(document.getElementById("multiply2").value);
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Vui lòng nhập số hợp lệ cho phép nhân.");
+                return;
+            }
+            let result = num1 * num2;
+            document.getElementById("multiplyResult").value = result;
+            addToHistory("PHÉP NHÂN", `${num1} * ${num2} = ${result}`, "multiply");
+        }
+
+        function divide() {
+            let num1 = parseFloat(document.getElementById("divide1").value);
+            let num2 = parseFloat(document.getElementById("divide2").value);
+            if (isNaN(num1) || isNaN(num2) || num2 === 0) {
+                alert("Vui lòng nhập số hợp lệ cho phép chia (không chia cho 0).");
+                return;
+            }
+            let result = num1 / num2;
+            document.getElementById("divideResult").value = result;
+            addToHistory("PHÉP CHIA", `${num1} / ${num2} = ${result}`, "divide");
+        }
+
+        function addToHistory(label, text, className) {
+            let historyDiv = document.getElementById("history");
+            let span = document.createElement("span");
+            span.classList.add(className);
+            span.innerText = `${label} ${text}`;
+            historyDiv.appendChild(span);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+div{
+    margin-left:20%;
+    margin-right:20%;
+}
+p{
+    background-color: rgb(14, 162, 41);
+    padding:10px 20px ;
+    border-radius: 10px;
+    height:30px;
+    width:100px;
+    text-align:center;
+    line-height:30px;
+    color:white;
+}
+.p1{
+    float:left;
+}
+.p2{
+    float:right;
+}
+p:hover{
+    background-color:rgb(35, 196, 64);
+}
