@@ -1,14 +1,15 @@
+body {
+    font-family: 'Roboto';
+    width: 100%;
+    height: 150vh;
+    background-size: cover; /* Sử dụng cover để tránh khoảng trống */
+    background: linear-gradient(to bottom, rgba(15,12,41,0.8) 0%, #364095 30%, rgba(50, 41, 131, 0.8) 85%, #423ba0 100%);
+    background-repeat: no-repeat;
+}
+
 html{
     font-size:1vw;
 }
-body{
-    font-family:'Roboto';
-    width:100%;
-    height:100%;
-    background:linear-gradient(to bottom,rgba(15,12,41,0.8) 0%,#364095 30%,rgba(50, 41, 131, 0.8) 85%,#423ba0 100%);
-    background-repeat:no-repeat;
-}
-
 header{
     width:100%;
     height:6rem;
@@ -111,9 +112,6 @@ header .menu .fa-bars{
     }
 
 @media only screen and (max-width: 740px){
-    body{
-        height:150rem;
-    }
         .content{
         margin-top:2rem;
         width:50%;
