@@ -274,6 +274,7 @@ footer p{
     font-weight: 300;
     font-size:large;
     margin:0px;
+    color:white;
     align-self: center;
 }
 
@@ -361,6 +362,18 @@ footer p{
             font-size: 4rem;
             color: white;
         } 
+        header .menu ul li:hover{
+            background-color: #274aa1;
+        }
+        header .menu ul li:active{
+            background-color: #193272;
+        }
+        header .menu ul .li-close{
+            background: none !important;
+        }
+        header .menu ul .li-close a:hover{
+            opacity:0.8;
+        }
    #about{
     /*position:relative;
     top:5rem;*/

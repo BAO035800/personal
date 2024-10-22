@@ -4,7 +4,7 @@ html{
 body{
     font-family:'Roboto';
     width:100%;
-    height:100vh;
+    height:100%;
     background:linear-gradient(to bottom,rgba(15,12,41,0.8) 0%,#364095 30%,rgba(50, 41, 131, 0.8) 85%,#423ba0 100%);
     background-repeat:no-repeat;
 }
@@ -87,6 +87,7 @@ header .menu .fa-bars{
     background:linear-gradient(to bottom,rgba(202,230,255,0.2) 0%,rgba(126,126,255,0.2) 60%,rgba(77, 33, 237, 0.719) 100%);
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .content button{
     width:10rem;
@@ -108,21 +109,25 @@ header .menu .fa-bars{
  header .menu .li-close{
         display:none;
     }
+
 @media only screen and (max-width: 740px){
-    .content{
-        margin-top:5rem;
+    body{
+        height:150rem;
+    }
+        .content{
+        margin-top:2rem;
         width:50%;
         padding:5rem;
         border-radius: 2.5rem;
-    }
-    .content button{
+        }
+        .content button{
         width:15rem;
         height:10rem;
         margin-left:auto;
         margin-right:auto;
         font-size:3rem;
         border-radius: 2rem;
-    }
+        }
         header {
             height: 100%;
             width: 30rem;
@@ -166,6 +171,7 @@ header .menu .fa-bars{
         header .menu ul li {
             margin: 0;
             padding: 0px;
+            line-height:8rem;
             height: 8%;
             text-align: center;
         }
@@ -202,5 +208,16 @@ header .menu .fa-bars{
             font-size: 4rem;
             color: white;
         }
+        header .menu ul li:hover{
+            background-color: #274aa1;
+        }
+        header .menu ul li:active{
+            background-color: #193272;
+        }
+        header .menu ul .li-close{
+            background: none !important;
+        }
+        header .menu ul .li-close a:hover{
+            opacity:0.8;
+        }
     }  
-}
